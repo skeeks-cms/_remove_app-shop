@@ -16,7 +16,7 @@
 //Скачивание свежей версии composer
 php -r "readfile('https://getcomposer.org/installer');" | php
 //Установка базового проекта SkeekS CMS
-COMPOSER_HOME=.composer php composer.phar create-project --no-install --prefer-dist skeeks/app-basic app-basic
+COMPOSER_HOME=.composer php composer.phar create-project --no-install --prefer-dist skeeks/app-shop app-basic
 //Спускаемся в папку
 cd app-basic
 //Качаем композер в проект
