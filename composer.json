@@ -1,0 +1,47 @@
+{
+    "name": "skeeks/app-shop",
+    "description": "Магазин на базе SkeekS CMS",
+    "keywords": ["framework", "cms", "skeeks", "sx", "app", "yii2"],
+    "homepage": "http://cms.skeeks.com",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "http://cms.skeeks.com",
+        "wiki": "http://git.skeeks.com/skeeks/cms/wikis/home",
+        "source": "http://git.skeeks.com/skeeks/cms-app"
+    },
+    "authors": [
+        {
+            "name": "Semenov Alexander",
+            "email": "semenov@skeeks.com"
+        }
+    ],
+    "require": {
+        "skeeks/cms": "*",
+        "skeeks/cms-module-form2": "*",
+        "skeeks/cms-module-reviews2": "*",
+        "skeeks/cms-vk-comments": "*",
+        "skeeks/cms-ya-share": "*",
+        "skeeks/cms-vk-community": "*",
+        "skeeks/cms-assets-auto-compress": "*",
+        "skeeks/yii2-template-smarty": "*",
+        "skeeks/cms-shop": "*",
+        "skeeks/cms-external-links": "*",
+        "skeeks/cms-log-db-target": "*",
+        "kartik-v/yii2-widget-rating": "*",
+        "skeeks/cms-instagram-widget": "*"
+
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable" : true,
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    },
+    "config": {
+        "process-timeout": 1800,
+        "github-oauth": {"github.com":""}
+    }
+}

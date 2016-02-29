@@ -1,0 +1,153 @@
+.navbar-default .navbar-nav > li > a
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.carousel-img
+{
+    text-align: center;
+}
+
+.carousel-e
+{
+    background: white;
+}
+
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right
+{
+    box-shadow: -1px 3px 24px 6px silver;
+    background: rgba(255, 255, 255, 0);
+}
+
+.carousel-e .carousel-indicators li
+{
+    box-shadow: -1px 1px 29px 7px silver;
+}
+
+.slogan
+{
+    font-size: 1.7em;
+}
+
+.breadCr {
+    line-height: 26px;
+}
+section.page-header .breadcrumb {
+    margin-top: auto;
+}
+
+div.row>div.shop-item img.img-responsive {
+    max-height: 150px;
+    max-width: 160px;
+    min-height: 150px;
+}
+
+#topMain.nav-pills>li>a.dropdownToggle {
+    padding-right: 25px;
+}
+
+#topMain.nav-pills>li>a.dropdownToggle:after {
+    display: block;
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin: -5px 0 0;
+    font-family: FontAwesome;
+    font-size: 12px;
+    opacity: .3;
+    line-height: 1em;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -moz-transform .2s ease-in;
+    -ms-transition: -ms-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;
+}
+img.img_list_catalog {
+    max-height: 200px;
+}
+
+.thumbnail {
+    text-align: center;
+}
+
+.thumbnail.catalog_list {
+    min-height: 200px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sx-content
+{
+    font-size: 15px;
+}
+
+.sx-top-menu>li
+{
+    font-size: 17px;
+}
+
+.sx-top-menu>li:hover
+{
+    background: rgba(192, 192, 192, 0.54);
+}
+
+.sx-top-menu>li.active
+{
+    background: #ED1F24;
+}
+#topMain.nav-pills>li.active>a
+{
+    color: white;
+}
+
+#topMain.nav-pills>li>a.dropdownToggle:after
+{
+    color: white;
+}
+
+.sx-bg-silver
+{
+    background: #F1F1F1 !important;
+}
+
+#sx-filters-form>.row
+{
+    margin-bottom: 0px;
+}
+
+div.shop-item-summary h2
+{
+    height: 40px;
+    overflow: hidden;
+}
+
+
+table.sx-table-width-100
+{
+    width: 100%;
+}
+
+table.sx-table-no-border
+{
+    border: none;
+}
+
+table.sx-table-no-border tr td
+{
+    border: none;
+    vertical-align: top;
+}
+
+table.sx-table-td-padding-10 tr td
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sx-discount-price
+{
+    color: #ED1F24;
+}

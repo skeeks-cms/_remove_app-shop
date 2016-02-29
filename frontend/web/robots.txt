@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /~*
+Host: select-moto.ru
+Sitemap: http://select-moto.ru/sitemap.xml
