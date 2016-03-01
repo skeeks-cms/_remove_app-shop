@@ -41,7 +41,6 @@
         }
     },
     "config": {
-        "process-timeout": 1800,
-        "github-oauth": {"github.com":""}
+        "process-timeout": 1800
     }
 }
