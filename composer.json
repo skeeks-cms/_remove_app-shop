@@ -18,19 +18,27 @@
     ],
     "require": {
         "skeeks/cms": "*",
+        "skeeks/cms-agent": "*",
+        "skeeks/cms-mailer": "*",
+        "skeeks/cms-seo": "*",
+        "skeeks/cms-search": "*",
+        "skeeks/cms-authclient": "*",
+        "skeeks/cms-db-dumper": "*",
         "skeeks/cms-module-form2": "*",
         "skeeks/cms-module-reviews2": "*",
+        "skeeks/cms-ssh-console": "*",
         "skeeks/cms-vk-comments": "*",
         "skeeks/cms-ya-share": "*",
         "skeeks/cms-vk-community": "*",
         "skeeks/cms-assets-auto-compress": "*",
-        "skeeks/yii2-template-smarty": "*",
+        "skeeks/yii2-template-smarty-asset": "*",
         "skeeks/cms-shop": "*",
         "skeeks/cms-external-links": "*",
         "skeeks/cms-log-db-target": "*",
         "kartik-v/yii2-widget-rating": "*",
+	    "skeeks/yii2-http-basic-auth": "*",
+        "yiisoft/yii2-debug": "*",
         "skeeks/cms-instagram-widget": "*"
-
     },
     "minimum-stability" : "dev",
     "prefer-stable" : true,
@@ -38,9 +46,32 @@
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
-        }
+        },
+        "writable": [
+            "console/runtime",
+            "common/runtime",
+            "frontend/runtime",
+            "frontend/web/assets"
+        ],
+        "executable": [
+            "yii"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "skeeks\\cms\\console\\Composer::postInstall"
+        ],
+        "post-update-cmd": [
+            "skeeks\\cms\\console\\Composer::postUpdate",
+            "php yii cms/cache/flush-all",
+            "php yii cms/migrate --interactive=0",
+            "php yii rbac/init",
+            "php yii cmsAgent/init",
+            "php yii cms/cache/flush-all"
+        ]
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "discard-changes": true
     }
 }

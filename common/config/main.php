@@ -10,34 +10,38 @@
  */
 $config = [
     'name' => 'SkeekS CMS',
+    'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
+    'on beforeRequest' => function ($event) {
+        \Yii::setAlias('template', '@app/views');
 
-
-    'components'    =>
-    [
-        'db' => include_once __DIR__ . '/db.php',
-
-        'urlManager' => [
-            'rules' => [
-                [
-                    'class'             => \skeeks\cms\components\urlRules\UrlRuleContentElement::className(),
-                ],
-
-                [
-                    'class'             => \skeeks\cms\components\urlRules\UrlRuleTree::className(),
+    },
+    'components' =>
+        [
+            'db' => include_once __DIR__ . '/db.php',
+            'urlManager' => [
+                'rules' => [
+                    'search' => 'cmsSearch/result',
+                    [
+                        'class' => \skeeks\cms\components\urlRules\UrlRuleContentElement::className(),
+                    ],
+                    [
+                        'class' => \skeeks\cms\components\urlRules\UrlRuleTree::className(),
+                    ]
                 ]
-            ]
+            ],
+            'cache' =>
+            [
+                'class' => 'yii\caching\FileCache',
+            ],
+            'assetManager' =>
+            [
+                'linkAssets' => true,
+            ],
+            'cmsAgent' =>
+            [
+                'onHitsEnabled' => false
+            ],
         ],
-
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-            //'class' => 'yii\caching\XCache',
-        ],
-
-        'i18n' => [
-            'class' => 'skeeks\cms\i18n\components\I18N',
-        ],
-    ],
 ];
-
-
 return $config;
+

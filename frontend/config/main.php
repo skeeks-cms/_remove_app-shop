@@ -11,35 +11,50 @@
 $config = [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'frontend\controllers',
+    'params' => [],
+    'on beforeRequest' => function ($event) {
+        \Yii::setAlias('template', '@app/views');
+        //  if (\Yii::$app->admin->requestIsAdmin)
+        // {
+        //\Yii::$app->httpBasicAuth->verify();
 
-    'params' => (new \skeeks\cms\Config([
-        COMMON_CONFIG_DIR . "/params.php",
-        COMMON_ENV_CONFIG_DIR . "/params.php",
-        APP_CONFIG_DIR . "/params.php",
-        APP_ENV_CONFIG_DIR . "/params.php"
-    ]))->getResult(),
-
+        //}
+    },
     'components' =>
-    [
-        'errorHandler' => [
-            'errorAction' => 'cms/error/error',
-        ],
-
-        'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'skeeks2',
-        ],
-
-        'user' =>
         [
-            'identityClass' => 'common\models\User',
-            /*'identityCookie' => [
-                'name' => '_identity',
-                'httpOnly' => true,
-                'domain' => '.cms.skeeks.com'
-            ]*/
-        ],
-    ]
-];
+            'errorHandler' => [
+                'errorAction' => 'cms/error/error',
+            ],
+            'request' => [
+                // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+                'cookieValidationKey' => 'skeeks',
+            ],
+            'user' =>
+                [
+                    'identityClass' => 'common\models\User',
+                    /*'identityCookie' => [
 
+                        'name' => '_identity',
+
+                        'httpOnly' => true,
+
+                        'domain' => '.cms.skeeks.com'
+
+                    ]*/
+                ],
+            'view' => [
+                'theme' =>
+                    [
+                        'pathMap' =>
+                            [
+                                '@app/views' =>
+                                    [
+                                        '@app/templates/default',
+                                    ],
+                            ]
+                    ],
+            ],
+        ]
+];
 return $config;
+
