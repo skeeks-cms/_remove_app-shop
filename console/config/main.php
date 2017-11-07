@@ -19,7 +19,11 @@ return [
                 ],
             ],
         ],
+        'urlManager' => [
+            'baseUrl'   => '',
+            //'hostInfo' => 'https://demo.ru'
+        ]
     ],
+
     'params' => [],
 ];
-
