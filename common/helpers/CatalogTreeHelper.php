@@ -2,7 +2,7 @@
 /**
  * @author Semenov Alexander <semenov@skeeks.com>
  * @link http://skeeks.com/
- * @copyright 2010 SkeekS (ÑêèêÑ)
+ * @copyright 2010 SkeekS (ï¿½ï¿½ï¿½ï¿½ï¿½)
  * @date 22.09.2015
  */
 namespace common\helpers;
@@ -23,10 +23,11 @@ class CatalogTreeHelper extends CmsTreeHelper
 
     public function getViewType()
     {
-        if (!$value = ArrayHelper::getValue($this->model->relatedPropertiesModel, 'viewType'))
+        return self::VIEW_PRODUCT;
+        /*if (!$value = ArrayHelper::getValue($this->model->relatedPropertiesModel, 'viewType'))
         {
             return self::VIEW_TREE;
-        }
+        }*/
 
         $property = $this->model->relatedPropertiesModel->getRelatedProperty('viewType');
         $enum = $property->getEnums()->andWhere(['id' => $value])->one();

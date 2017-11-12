@@ -271,7 +271,7 @@ $shopProduct->createNewView();
                                                 5 => 'Отзывов: ' . (int) $model->relatedPropertiesModel->getAttribute('reviews2_count'),
                                             ]
                                         ]
-                                    ], (array) $options));
+                                    ], []));
                             ?>
                         </div>
 
