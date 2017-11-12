@@ -73,6 +73,7 @@
         "config-plugin": {
             "web": [
                 "common/config/main.php",
+                "common/config/db.php",
                 "frontend/config/main.php"
             ],
             "web-dev": [
@@ -85,6 +86,7 @@
             ],
             "console": [
                 "common/config/main.php",
+                "common/config/db.php",
                 "console/config/main.php"
             ],
             "console-dev": [
